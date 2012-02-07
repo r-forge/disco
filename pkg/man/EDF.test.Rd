@@ -3,7 +3,7 @@
 \alias{EDF.test}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Empirical Distribution Function
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
