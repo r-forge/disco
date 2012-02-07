@@ -3,10 +3,10 @@
 \alias{ksboot.test}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Running a ksboot test
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+More meat needed here.
 }
 \usage{
 ksboot.test(x, distr = "pnorm", B = 100)

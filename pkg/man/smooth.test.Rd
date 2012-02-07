@@ -102,6 +102,7 @@ The type of test may be specified through a formula in the \code{x} argument of 
 When a one-sample smooth test must be performed for a distribution that is not implemented in the \code{Smooth.test} function, a user-specified density function may be used by setting \code{f} to this user-specified function. It should be an R function with only one argument (the quantile) and which returns a numeric element (the density). No unknown nuisance parameters are allowed. The \code{Smooth.test} function relies on the \code{\link{orth.poly}} function which generates polynomials that are orthonormal to the density function specified in \code{f}. See Rayner et al. (2008) and Emerson (1968) for more details on these algorithms. 
 
 For the distributions that are implemented in \code{Smooth.test} (i.e for norm, exp, logarithmic, logistic, gamma, geometric, uniform, ZIP, ZTP, Poisson, beta binomial, negative binomial, extreme value and generalised Pareto), the argument \code{pars} refers to the parameters of these distributions. The definitions of these parameters depend on the distribution (\code{distr}):
+\itemize{
 \item{norm}{mean,sd}
 \item{logis}{location,scale}
 \item{negb}{size,prob}
@@ -117,6 +118,7 @@ For the distributions that are implemented in \code{Smooth.test} (i.e for norm, 
 \item{genpareto}{scale,-shape}
 \item{betab}{size=\code{ntrials},shape1,shape2}
 \item{gamma}{shape,scale}
+}
 }
 \value{
 %%  ~Describe the value returned

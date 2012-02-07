@@ -7,3 +7,5 @@ export(Boxplot)
 export(wmw.diagnose)
 export(diagnose)
 export(components)
+export(test.stat)
+

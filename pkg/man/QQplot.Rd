@@ -3,10 +3,10 @@
 \alias{QQplot}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Plotting a QQplot
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+You'll need a bit more help than this. It's coming.
 }
 \usage{
 QQplot(x, y = NULL, distr = qnorm, pars = c(0, 1), blom = 0, PIT = F, data = NULL, name = NULL, groups = NULL, ...)

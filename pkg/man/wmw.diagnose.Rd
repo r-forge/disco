@@ -3,10 +3,10 @@
 \alias{wmw.diagnose}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Run the function wmw.diagnose
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Still working on it...
 }
 \usage{
 wmw.diagnose(obj, ...)
