@@ -19,6 +19,7 @@
 PPplot <-
 function(x,y=NULL,distr=qnorm,pars=c(0,1),blom=0,data=NULL,name=NULL,groups=NULL,...) {
 
+
   onesample<-TRUE
   DNAME1<-name
   distr <- match.fun(distr)                      # JM: extend functionality. Make distr general
