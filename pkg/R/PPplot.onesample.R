@@ -1,3 +1,15 @@
+#'Plot a PP plot for one sample
+#'
+#'This function is called from \code{\link{PPplot}} and should not be called directly.
+#'@param x a data vector
+#'@param d a distribution function, eg \code{link{qnorm}} or \code{link{qunif}}. The first argument to this function has to be a vector of probabilities. Other parameters to this function should be applied in the argument \code{pars}. See also the examples.
+#'@param pars The extra arguments to the distribution function, in the form of a named list. See also the examples.
+#'@param blom See the \code{blom} argument of \code{\link{PPplot}}
+#'@return This function doesn't return a useful value
+#'@note To keep the function consistent with the examples in the book, the argument \code{pars} can also take a named or unnamed vector. This vector is turned into a list internally and a warning is given that this functionality will disappear in a next major revision. Also the argument \code{name} is dropped from an earlier version. Use \code{main} instead
+#'@author Olivier Thas, Joris Meys
+
+
 PPplot.onesample <-
 function(x,d,pars=NA,blom=0,name=NULL,...) {
   # x: data vector

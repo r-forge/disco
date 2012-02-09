@@ -8,7 +8,7 @@ Authors@R: c(
   person('Joris','Meys', role=c('cre'),email='Joris.Meys@Ugent.be'))
 Author: Olivier Thas and Bert De Boeck
 Maintainer: Joris Meys <Joris.Meys@UGent.be>
-Description: This package combines a number of goodness-of-fit procedures for the one-sample and K-sample problems. It accompanies the book 'Comparing Distributions' by Olivier Thas.
+Description: This package combines a number of goodness-of-fit procedures for the one-sample and K-sample problems. It accompanies the book 'Comparing Distributions' by Olivier Thas. The package is currently in the process of being rewritten, so this is the beta version going towards version 2.
 License: GPL (>=2)
 
 
