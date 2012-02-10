@@ -16,7 +16,42 @@
 #'@note More information is given in section 3.2 and 8.1 of the book 'Comparing Distributions' by Olivier Thas.
 #'@references Thas Olivier(2009), Comparing Distributions. Springer ( \url{http://www.springer.com/statistics/book/978-0-387-92709-1})
 
-PPplot <-
-function(x,...) {
-    UseMethod("PPplot")
+PPplot.default <-
+function(x,y=NULL,name=NULL,...) {
+
+  mf <- match.call()
+  extras <- match.call(expand.dots=FALSE)$...
+  onesample<-TRUE
+  DNAME1<-name
+                       # JM: extend functionality. Make distr general
+  if(!is.null(y)) {
+  	onesample<-FALSE
+  	mf <- match.call(expand.dots = TRUE)
+
+  	Xind<-match("xlab",names(mf))
+  	Yind<-match("ylab",names(mf))
+  	XNAME<-deparse(substitute(x))
+  	YNAME<-deparse(substitute(y))
+  	extras<-match.call(expand.dots=FALSE)$...
+    cl<-call("PPplot.moresample",x=x,y=y)
+    if(is.null(extras$xlab)) cl$xlab=ifelse(is.na(Xind),XNAME,NULL)
+    if(is.null(extras$ylab)) cl$ylab=ifelse(is.na(Yind),YNAME,NULL)
+    if (length(extras) > 0) {
+        existing <- !is.na(match(names(extras), names(cl)))
+        for (a in names(extras)[existing]) cl[[a]] <- extras[[a]]
+        if (any(!existing)) {
+            cl <- c(as.list(cl), extras[!existing])
+            cl <- as.call(cl)
+        }
+    }
+    eval(cl)
+  } else {
+    x.vector<-x
+    DNAME1<-ifelse(is.null(name),deparse(substitute(x)),name)
+  }
+  
+  if(onesample) {
+  	PPplot.onesample(x=x.vector,name=DNAME1,...)
+  }
 }
+

@@ -11,9 +11,9 @@
 
 
 PPplot.onesample <-
-function(x,d,pars=NA,blom=0,name=NULL,...) {
+function(x,d=qnorm,pars=list(),blom=0,name=NULL,...) {
   # x: data vector
-  # d: specifief the quantile function that has to be used; now only qnorm and qunif are defined 
+  # d: specifies the quantile function that has to be used; now only qnorm and qunif are defined 
   # pars: vector with parameters -- correspods to parameters used by q-function
   # blom: parameter used for the plotting positions (according to Blom)
   # name: name to be used on graph instead of x
@@ -24,14 +24,14 @@ function(x,d,pars=NA,blom=0,name=NULL,...) {
   x<-sort(x)
   p<-ppoints(n,a=blom)
   # parameter estimates should be given in pars
-  #d<-deparse(substitute(distr))
+  d<-match.fun(d)
 
   Fhat<-ecdf(x)  
 
-  q<-switch(d,
-            qnorm=Fhat(qnorm(p,mean=pars[1],sd=pars[2])),
-            qunif=Fhat(qunif(p,min=pars[1],max=pars[2])),
-		Fhat(distr(p,pars=pars)))
+  q<-Fhat(do.call(d,c(list(p),as.list(pars))))
+  
+  
+  
   i.main<-sum(ndots=="main")
   i.ylab<-sum(ndots=="ylab")
   i.xlab<-sum(ndots=="xlab")
