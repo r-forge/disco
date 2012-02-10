@@ -32,20 +32,23 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 
 <!-- get project title  -->
 <!-- own website starts here, the following may be changed as you like -->
-
-<?php if ($handle=fopen('http://'.$domain.'/export/projtitl.php?group_name='.$group_name,'r')){
-$contents = '';
-while (!feof($handle)) {
-	$contents .= fread($handle, 8192);
-}
-fclose($handle);
-echo $contents; } ?>
-
+<!-- Project description is edited out -->
 <!-- end of project description -->
+<p> The <TT>disco</TT> package is not about music, but about <strong>dis</strong>tribution <strong>co</strong>mparison. This project contains the functions that accompany the book <a href=http://www.springer.com/statistics/book/978-0-387-92709-1>Comparing Distributions by Olivier Thas.</a>
+</p>
 
-<p> This project contains the functions that accompany the book <a href=http://www.springer.com/statistics/book/978-0-387-92709-1>Comparing Distributions by Olivier Thas.</a> </p>
+<p>
+<CENTER>
+<a href='http://biomath.ugent.be/~othas/Comparing_Distributions/Home.html'>
+<img src='http://biomath.ugent.be/~othas/Comparing_Distributions/Home_files/Cover3.jpg' alt='Book cover of Comparing Distributions' vspace=30/></a>
+</CENTER>
+</p>
 
-<p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
+<p>
+The original package was called <TT>cd</TT> and can still be downloaded from <a href=http://biomath.ugent.be/~othas/Comparing_Distributions/R-Package.html><strong>here</strong></a>. As this package is designed for R 2.10, it is time to update the code to the new standards and update the help files for the different functions. This update is currently in progress. While we're at it, the functions are generalized and refactored in order to increase performance and make the interfaces more intuitive. This effort will result in a version 2.0 of the <TT>disco</TT> package, formerly known as <TT>cd</TT>.
+</p>
+
+<p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. If you have any questions regarding the project or the application of the functions, feel free to mail me at <a href="mailto:Joris.Meys@Ugent.be">Joris.Meys@Ugent.be</a></p>
 
 </body>
 </html>
