@@ -45,6 +45,11 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 </p>
 
 <p>
+  The package can be downloaded for Windows, Linux and Mac from <a href="https://r-forge.r-project.org/R/?group_id=1333"><strong>R-Forge</strong></a>, or installed using the command:   
+  <TT>install.packages("disco", repos="http://R-Forge.R-project.org")</TT>
+</p>
+
+<p>
 The original package was called <TT>cd</TT> and can still be downloaded from <a href=http://biomath.ugent.be/~othas/Comparing_Distributions/R-Package.html><strong>here</strong></a>. As this package is designed for R 2.10, it is time to update the code to the new standards and update the help files for the different functions. This update is currently in progress. While we're at it, the functions are generalized and refactored in order to increase performance and make the interfaces more intuitive. This effort will result in a version 2.0 of the <TT>disco</TT> package, formerly known as <TT>cd</TT>.
 </p>
 
