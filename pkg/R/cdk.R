@@ -1,5 +1,14 @@
+###############################
+# CHANGE LOG
+###############################
+# 2012/05/09 : Added var='jn' as argument to make function work again. - JM
+#              corrected switch statement - JM
+
+
 cdk <-
-function(x,g,order=4,basis="Lg",B=NULL,criterion="AIC",horizon="order",stat.only=F) {
+function( x,g,order=4,basis="Lg",B=NULL,criterion="AIC",
+          horizon="order",stat.only=F,
+          var="jn") {
 	# var="jn",st=F : these are extra arguments for when empirical standardisation gets implemented
 	n<-length(x)
 	ns<-as.numeric(table(g))
@@ -15,7 +24,7 @@ function(x,g,order=4,basis="Lg",B=NULL,criterion="AIC",horizon="order",stat.only
 	x1<-x[1:ns[1]]
 	x2<-x[(ns[1]+1):(ns[2]+ns[1])]
 	for(i in 1:order) {
-		fn<-switch(Lg=Lg(i),Four=Fourier(i))
+		fn<-switch(basis,Lg=Lg(i),Four=Fourier(i))
 		ind<-1
 		for(s in 1:k) {
   		  comp[s,i]<-sqrt(ns[s])*mean(fn(r[ind:(ns[s]+ind-1)]))
