@@ -9,3 +9,6 @@ export(diagnose)
 export(components)
 export(test.stat)
 
+S3method(PPplot, default)
+S3method(PPplot, formula)
+S3method(PPplot, list)
