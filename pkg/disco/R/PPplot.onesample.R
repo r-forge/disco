@@ -11,7 +11,7 @@
 
 
 PPplot.onesample <-
-function(x,d=qnorm,pars=list(),blom=0,name=NULL,...) {
+function(x,distr=qnorm,pars=list(),blom=0,name=NULL,...) {
   # x: data vector
   # d: specifies the quantile function that has to be used; now only qnorm and qunif are defined 
   # pars: vector with parameters -- correspods to parameters used by q-function
@@ -24,7 +24,7 @@ function(x,d=qnorm,pars=list(),blom=0,name=NULL,...) {
   x<-sort(x)
   p<-ppoints(n,a=blom)
   # parameter estimates should be given in pars
-  d<-match.fun(d)
+  d<-match.fun(distr)
 
   Fhat<-ecdf(x)  
 
