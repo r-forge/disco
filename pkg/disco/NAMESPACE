@@ -15,4 +15,5 @@ S3method(PPplot, list)
 S3method(diagnose, numeric)
 S3method(diagnose, formula)
 S3method(components, cdk)
+S3method(print, cdk)
 
