@@ -3,12 +3,12 @@
 ###############################
 # 2012/05/09 : Added var='jn' as argument to make function work again. - JM
 #              corrected switch statement - JM
-
+#              added st=FALSE as argument to avoid error in smooth.test
 
 cdk <-
 function( x,g,order=4,basis="Lg",B=NULL,criterion="AIC",
           horizon="order",stat.only=F,
-          var="jn") {
+          var="jn",st=FALSE) {
 	# var="jn",st=F : these are extra arguments for when empirical standardisation gets implemented
 	n<-length(x)
 	ns<-as.numeric(table(g))
