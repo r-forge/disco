@@ -4,6 +4,7 @@ function(sample,S,min.order,...) {
   # min.order depends on method of estimation and distribution; 
   #   it is determined in ddsmooth.test
   max.order<-max(unlist(S))
+  #JM - HAS TO CHANGE - infinite recursion
   st<-smooth.test(sample,order=max.order,B=NULL,output=F,...)
   Sigma<-st$Sigma
   U<-matrix(st$comp,ncol=1) #$comp are now the unscaled components
